@@ -34,10 +34,12 @@ var editTitle = function (e) {
 function effectOn(id) {
     // Rita en ram runt personen, kanske lite drop shadow?
     document.getElementById(id).style.border = "2px solid #000";
+    document.getElementById(id).style.boxShadow = "10px 10px 30px";
 }
 
 function effectOff(id) {
     // Stäng av effekten när musen inte längre är ovanför personen
     document.getElementById(id).style.border = "none";
+    document.getElementById(id).style.boxShadow = "none";
 }
 
