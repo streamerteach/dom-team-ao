@@ -1,24 +1,24 @@
 window.onload = function () {
     // Lyssna efter händels
     //document.getElementsByClassName("profile")
-    const profiles = document.getElementsByClassName("profile");
+    const teamMembers = document.getElementsByClassName("team-member");
 
 
     //en for loop för att gå igenom alla bilder.
-    for (let i = 0; i < profiles.length; i++) {
-        const profile = profiles[i];
+    for (let i = 0; i < teamMembers.length; i++) {
+        const teamMember = teamMembers[i];
 
-        if (profile && profile.id) {
+        //if (teamMember && teamMember.id) {
             // mouseenter eventlistener
-            profile.addEventListener("mouseenter", function () {
-                effectOn(profile.id);
+            teamMember.addEventListener("mouseenter", function () {
+                effectOn(teamMember);
             });
 
             // mouseleave eventlistener
-            profile.addEventListener("mouseleave", function () {
-                effectOff(profile.id);
+            teamMember.addEventListener("mouseleave", function () {
+                effectOff(teamMember);
             });
-        }
+       // }
 
     }
 }
@@ -31,23 +31,25 @@ var editTitle = function (e) {
 
 
 
-function effectOn(id) {
+function effectOn(element) {
     // Rita en ram runt personen, kanske lite drop shadow?
     //document.getElementById(id).style.border = "2px solid #000";
     //document.getElementById(id).style.boxShadow = "7px 7px 5px #ccc";
 
     //Via css, .hovering:
-    document.getElementById(id).classList.add("hovering");
+    //document.getElementById(id).classList.add("hovering");
+    element.classList.add("hovering");
 
 }
 
-function effectOff(id) {
+function effectOff(element) {
     // Stäng av effekten när musen inte längre är ovanför personen
     //document.getElementById(id).style.border = "none";
     //document.getElementById(id).style.boxShadow = "none";
 
     //via css, .hovering:
-    document.getElementById(id).classList.remove("hovering");
+    //document.getElementById(id).classList.remove("hovering");
+    element.classList.remove("hovering");
 
 
 }
