@@ -20,12 +20,31 @@ window.onload = function () {
             });
        // }
 
+               // Add event listener for click to change title
+               teamMember.addEventListener("click", function () {
+                editTitle(teamMember);
+            });
+
     }
 }
 
 
-var editTitle = function (e) {
-    // Ändra "team-title"
+
+
+
+var editTitle = function (teamMember) {
+        // Ändra "team-title"
+
+    // Hitta tittel-elementet
+    const titleElement = teamMember.querySelector('.team-title');
+    
+    // Promt 
+    const newTitle = prompt("Ge en ny titel för " + teamMember.querySelector('.team-name').textContent, titleElement.textContent);
+
+    // uppdatera titel
+    if (newTitle !== null) {
+        titleElement.textContent = newTitle;
+    }
 };
 
 
