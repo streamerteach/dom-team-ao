@@ -33,13 +33,22 @@ var editTitle = function (e) {
 
 function effectOn(id) {
     // Rita en ram runt personen, kanske lite drop shadow?
-    document.getElementById(id).style.border = "2px solid #000";
-    document.getElementById(id).style.boxShadow = "10px 10px 30px";
+    //document.getElementById(id).style.border = "2px solid #000";
+    //document.getElementById(id).style.boxShadow = "7px 7px 5px #ccc";
+
+    //Via css, .hovering:
+    document.getElementById(id).classList.add("hovering");
+
 }
 
 function effectOff(id) {
     // Stäng av effekten när musen inte längre är ovanför personen
-    document.getElementById(id).style.border = "none";
-    document.getElementById(id).style.boxShadow = "none";
+    //document.getElementById(id).style.border = "none";
+    //document.getElementById(id).style.boxShadow = "none";
+
+    //via css, .hovering:
+    document.getElementById(id).classList.remove("hovering");
+
+
 }
 

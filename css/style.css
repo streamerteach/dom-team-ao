@@ -45,6 +45,7 @@ body {
     box-shadow: 7px 7px 5px #ccc;
     border: 2px black solid;
     border-radius: 10px;
+    transition: box-shadow 0.5s;
 }
 
 
